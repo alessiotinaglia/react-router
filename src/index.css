@@ -5,12 +5,16 @@ h1{
   padding: 15px;
 }
 
-h5{
-  color: aqua;
+h4{
+  padding: 10px;
+  font-size: 1.3em;
+}
+
+h2{
+  font-size: 4em;
 }
 
 body{
-  max-width: 1200px;
   margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.641);
 }
@@ -18,5 +22,24 @@ body{
 .contenitore{
   display: flex;
   flex-wrap: wrap;
+}
+
+header {
+  height: 150px;  
+  padding: 25px;
+  font-size: 1.3em;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333333ed;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  z-index: 1000; 
 }
 

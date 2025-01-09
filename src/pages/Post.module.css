@@ -28,28 +28,3 @@ p {
     height: 50px;
 }
 
-/* Colori tag */
-
-.vacanze {
-    color: green;
-}
-
-.vacanzaPerfetta {
-    color: rgb(223, 3, 139);
-}
-
-.viaggio {
-    color: yellow;
-}
-
-.allaScoperta {
-    color: blue;
-}
-
-.vacanzeInFamiglia{
-    color: red;
-}
-
-.avventure{
-    color: deepskyblue;
-}

@@ -9,7 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<DefaultLayout />}>          
+        <Route element={<DefaultLayout />}>
+          <Route path="/" element={<Post />} />
           <Route path="/posts" element={<Post />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/HomePage" element={<HomePage />} />
