@@ -5,17 +5,21 @@ h1{
   padding: 15px;
 }
 
+h2{
+  font-size: 4em;
+}
+
+h3{
+  padding: 25px 250px;
+  color: white;
+}
+
 h4{
   padding: 10px;
   font-size: 1.3em;
 }
 
-h2{
-  font-size: 4em;
-}
-
 body{
-  margin: 0 auto;
   background-color: rgba(0, 0, 0, 0.641);
 }
 
@@ -38,7 +42,7 @@ footer {
   width: 100%;
   background-color: #333333ed;
   color: white;
-  padding: 20px 0;
+  padding: 20px 15px;
   text-align: center;
   z-index: 1000; 
 }
