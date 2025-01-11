@@ -1,27 +1,35 @@
-import { NavLink } from 'react-router-dom';
+import React from 'react';
 
-function Contatti() {
-    return (
-        <div>
-            <div className="container my-5">
-                <div className="row">
-                    <div className="col-md-6">
-                        <h2>Benvenuto nella nostra app di ricette!</h2>
-                        <h4>
-                            Scopri una varietà di ricette deliziose e facili da preparare.
-                        </h4>
-                        <h4>
-                            Esplora la lista delle ricette, aggiungi le tue preferite e condividi con gli amici!
-                        </h4>
-                        <NavLink to="/posts" className="btn btn-primary button mt-3">Inizia ora</NavLink>
-                    </div>
-                    <div className="col-md-6">
-                        <img src="/cina-cucina-iStock-600101062-1080x720.jpg" alt="Food" className="img-fluid rounded" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+export default function ContactInfoPage() {
+  return (
+    <div className="container mt-2">
+      <h2>I miei contatti</h2>
+      
+      <h4>Se hai domande o desideri entrare in contatto con me, puoi utilizzare i seguenti metodi:</h4>
+      
+      <div className="">
+        <h4>Telefono</h4>
+        <p>📞 +39 123 456 789</p>
+      </div>
+      
+      <div className="">
+        <h4>Email</h4>
+        <p>📧 <a href="mailto:tuoemail@example.com">tuoemail@example.com</a></p>
+      </div>
+      
+      <div className="">
+        <h4>Indirizzo</h4>
+        <p>🏠 Via Esempio, 123, 00100 Roma (Italia)</p>
+      </div>
+
+      <div className="">
+        <h4>Social Media</h4>
+        <p>
+          📱 <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> | 
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"> LinkedIn</a>
+        </p>
+      </div>
+
+    </div>
+  );
 }
-
-export default Contatti;

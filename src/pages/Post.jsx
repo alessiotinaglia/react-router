@@ -40,7 +40,7 @@ export default function Post() {
   };
 
   const addNewPost = (newPost) => {
-    setPosts([...posts, newPost]);
+    setPosts([...posts, newPost]); 
   };
 
   return (
