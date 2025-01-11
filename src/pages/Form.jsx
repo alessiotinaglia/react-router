@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-export default function Form() {  // Usa Form con la maiuscola
+export default function Form() { 
   const [newPost, setNewPost] = useState({
     titolo: '',
     contenuto: '',
