@@ -10,7 +10,6 @@ export default function Form({ addNewPost }) {
     immagine: '',
     tags: ''
   });
-  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -45,7 +44,7 @@ export default function Form({ addNewPost }) {
 
   return (
     <section className="container">
-      <h2>Aggiungi la tua ricetta</h2>
+      <h2 className="p-3">Aggiungi la tua ricetta</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -81,8 +80,8 @@ export default function Form({ addNewPost }) {
           placeholder="Tags"
           className="form-control mt-2"
         />
-        <button type="submit" className="btn btn-primary mt-3 m-3">Aggiungi Articolo</button>
-        <Link to="/posts" className="btn btn-success mt-3 m-3">Pubblica</Link>
+        <button type="submit" className="btn btn-primary mt-3 m-2">Salva Articolo</button>
+        <Link to="/posts" className="btn btn-success mt-3 m-2">Pubblica</Link>
       </form>
     </section>
   );
