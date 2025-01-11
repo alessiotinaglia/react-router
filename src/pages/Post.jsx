@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { NavLink, useParams, useNavigate } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import style from './Post.module.css';
 
 export default function Post() {
   const [posts, setPosts] = useState([]);
   const [selectedPost, setSelectedPost] = useState(null);
   const { id } = useParams();
-  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get("http://localhost:3000/posts")
@@ -39,9 +39,14 @@ export default function Post() {
       });
   };
 
+  const addNewPost = (newPost) => {
+    setPosts([...posts, newPost]);
+  };
+
   return (
     <main>
       <div className="container">
+        <Link to="/posts/form" className="btn btn-success w-100 text-center mb-3">Aggiungi una nuova ricetta</Link>
         <div className="row">
           {posts.map((post) => (
             <div className="col-12 col-sm-6 col-md-4" key={post.id}>
@@ -70,7 +75,6 @@ export default function Post() {
             <img src={selectedPost.immagine} alt={selectedPost.titolo} className="img-fluid" />
           </div>
         )}
-
       </div>
     </main>
   );

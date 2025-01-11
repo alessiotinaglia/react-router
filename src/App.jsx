@@ -4,6 +4,7 @@ import Post from './pages/Post';
 import Form from './pages/Form'; 
 import HomePage from './pages/HomPage';  
 import PostDetail from './pages/PostDetail';  
+import Contatti from './pages/Contatti';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
           <Route path="/HomePage" element={<HomePage />} /> 
           <Route path="/posts" element={<Post />} />  
           <Route path="/posts/:id" element={<PostDetail />} />  
-          <Route path="/form" element={<Form />} />
+          <Route path="/posts/form" element={<Form />} />
+          <Route path="/Contatti" element={<Contatti />} />
         </Route>
       </Routes>
     </BrowserRouter>

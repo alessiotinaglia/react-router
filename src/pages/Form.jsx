@@ -1,13 +1,16 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-export default function Form() { 
+export default function Form({ addNewPost }) {
   const [newPost, setNewPost] = useState({
     titolo: '',
     contenuto: '',
     immagine: '',
     tags: ''
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -27,7 +30,7 @@ export default function Form() {
 
     axios.post("http://localhost:3000/posts", postToSend)
       .then((res) => {
-        // Reset del form
+        addNewPost(res.data);
         setNewPost({
           titolo: '',
           contenuto: '',
@@ -42,6 +45,7 @@ export default function Form() {
 
   return (
     <section className="container">
+      <h2 className="p-2">Aggiungi la tua nuova ricetta</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -77,13 +81,8 @@ export default function Form() {
           placeholder="Tags"
           className="form-control mt-2"
         />
-        
-        <button type="submit" className="btn btn-primary mt-3">Aggiungi Articolo</button>
-        <div>
-          <h3>dateci nuove ricette e spunti cosi che tutti le possano provare!!</h3>
-        </div>
+        <Link to="/posts" className="btn btn-primary mt-3">Aggiungi Articolo</Link>
       </form>
     </section>
-
   );
 }

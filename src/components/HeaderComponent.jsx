@@ -11,7 +11,7 @@ function Header() {
                     <NavLink className="nav-link" to="/posts">Lista delle ricette</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink className="nav-link" to="/Form">Aggiungi una ricetta</NavLink>
+                    <NavLink className="nav-link" to="/Contatti">Contatti</NavLink>
                 </li>
             </ul>
         </header>
